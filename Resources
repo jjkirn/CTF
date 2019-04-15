@@ -1,0 +1,311 @@
+CTF Resources - 4/15/19 J.Kirn
+
+REVERSING:
+DEBUGGERS/DISASSEMBLERS/DECOMPILER
+----------------------------------
+Debuggers (Windows)
+Immunity, IDA Pro/Freeware, HxD
+
+Ghidra (NSA decompiler)
+https://ghidra-sre.org/InstallationGuide.html
+
+edb-debugger (github - https://github.com/eteran/edb-debugger)
+edb is a cross platform AArch32/x86/x86-64 debugger. 
+It was inspired by Ollydbg, but aims to function on AArch32, x86, and x86-64 a
+s well as multiple OS's. Linux is the only officially supported platform at the moment,
+ but FreeBSD, OpenBSD, OSX and Windows ports are underway with varying degrees of functionality.
+
+odbg200 (Windows 32 bit only) ( http://www.ollydbg.de ) 
+OllyDbg is a 32-bit assembler level analyzing debugger for Microsoft Windows. 
+Emphasis on binary code analysis makes it particularly useful in cases where the source is unavailable.
+
+x64dbg (Website - https://x64dbg.com/#start )
+x64dbg is an open-source x64/x32 debugger for Windows.
+Github Link – https://github.com/x64dbg/x64dbg
+
+Radare2 (Github Link – https://github.com/radare/radare2) (already in Kali)
+r2 is a rewrite from scratch of radare in order to provide a set of libraries and tools to work with binary files.
+Radare project started as a forensics tool, a scriptable commandline hexadecimal editor able to open disk files, 
+but later support for analyzing binaries, disassembling code, debugging programs, attaching to remote gdb servers and its portable.
+Official Website – http://www.radare.org/
+
+Plasma (Github Link – https://github.com/plasma-disassembler/plasma)
+PLASMA is an interactive disassembler. 
+It can generate a more readable assembly (pseudo code) with colored syntax. 
+You can write scripts with the available Python api. This project is still in big development.
+
+DnSpy (Github Link – https://github.com/0xd4d/dnSpy)
+It is a debugger and .NET assembly editor. You can use it to edit and debug assemblies even if you don’t have any source code available.
+
+De4dot (Github Link – https://github.com/0xd4d/de4dot)
+de4dot is an open source (GPLv3) .NET deobfuscator and unpacker written in C#. 
+It will try its best to restore a packed and obfuscated assembly to almost the original assembly. 
+Most of the obfuscation can be completely restored (eg. string encryption), 
+ but symbol renaming is impossible to restore since the original names aren’t (usually) part of the obfuscated assembly.
+
+dotPeek (Website Link – https://www.jetbrains.com/decompiler/)
+It is a free-of-charge standalone tool based on ReSharper’s bundled decompiler. 
+It can reliably decompile any .NET assembly into equivalent C# or IL code. 
+This decompiler supports multiple formats including libraries (.dll), executables (.exe), and Windows metadata files (.winmd).
+
+ILSpy (Github Link – https://github.com/icsharpcode/ILSpy/)
+ILSpy is the open-source .NET assembly browser and decompiler. 
+ILSpy 3.0 is one of the most stable version ever.
+
+CFF Explorer/ntcore/Explorer Suite
+https://ntcore.com/?page_id=388
+Pro version: https://cerbero.io/
+
+https://www.yeahhub.com/best-19-tools-used-reverse-engineering-2018-update/
+
+Many tools:
+https://blackarch.org/reversing.html
+
+CRYPTOGRAPHY
+----------------------------------
+Fernet decode (symetric encryption)
+https://asecuritysite.com/encryption/ferdecode
+https:cryptography.io/en/latest/fernet (python)
+
+Cryptogram solver (web)
+https://quipqiup.com/
+
+Cryptotool(N-Gram Analysis - web)
+https://www.cryptool.org/en/cto-cryptanalysis/n-gram-analysis
+
+Caesar Cipher (web)
+https://www.xarg.org/tools/caesar-cipher
+
+Bacon’s cipher encoder/decoder (web)
+https://en.wikipedia.org/wiki/Bacon%27s_cipher
+https://mothereff.in/bacon
+
+Vigenere Cipher (web)
+https://www.dcode.fr/vigenere-cipher
+
+Morse Code (web)
+https://morsecode.scphillips.com/translator.html
+
+Aristocrat or Patristocrat cipher decoder (web)
+https://bionsgadgets.appspot.com/ww_forms/aristo_pat_web_worker3.html
+
+py-seccure (web - github)
+https://github.com/bwesterb/py-seccure
+Simple Elliptic Curve Cryptography for Python
+
+Python Crypto (pycrypto) (web)
+Used for public/private key encryption
+https://pypi.org/project/pycrypto/
+
+Black Hat Python--Encrypt and Decrypt with RSA Cryptography
+https://medium.com/@ismailakkila/black-hat-python-encrypt-and-decrypt-with-rsa-cryptography-bd6df84d65bc
+Section: Decrypting our file using the private key
+
+RSA - given c,p,q,dp,dq (web)
+https://github.com/LFlare/picoctf_2017_writeup/tree/master/cryptography/weird-rsa
+
+RSA CTF (web)
+https://github.com/Ganapati/RsaCtfTool
+
+RSA - Factor the (n) parameter (web)
+http://www.mickybullock.com/blog/wp-content/RSA_Cryptography/ffactory.php
+
+AES Encryption and Decryption Online Tool (Web Calculator)
+https://www.devglan.com/online-tools/aes-encryption-decryption
+
+AES - Symmetric Cipers Online
+http://aes.online-domain-tools.com/
+
+
+STENANOGRAPHY
+------------------------------------------------
+Sonic Visualizer (Windows/Linux)
+https://www.sonicvisualiser.org/download.html
+layer-> add spectrogram to see imbedded text
+
+MP3Stego (Windows)
+https://www.petitcolas.net/steganography/mp3stego/
+
+stegcracker (Kali) - only supports jpg, jpeg, wav, au
+https://github.com/Paradoxis/StegCracker
+
+stegsolver (java)
+https://github.com/eugenekolo/sec-tools/blob/master/stego/stegsolve/stegsolve/stegsolve.jar
+java -jar stegsolve.jar
+
+Best Stego Tutorial
+https://www.youtube.com/watch?v=KUZVIBXfoeA
+https://github.com/DominicBreuker/stego-toolkit
+
+steganabara
+https://github.com/DominicBreuker/stego-toolkit/blob/master/install/steganabara.sh
+
+Install steghide, gimp (Kali)
+
+stegbrute - Steghide-Brute-Force-Tool (works on wav files)
+https://github.com/Va5c0/Steghide-Brute-Force-Tool
+
+zsteg - detect stegano-hidden data in PNG & BMP (Kali)
+gem install zsteg
+# zsteg -h
+
+StegHide (http://steghide.sourceforge.net/documentation.php)
+StegHide is a steganography program that is able to hide data in various kinds of image- and audio-files. 
+The color- respectively sample-frequencies are not changed thus making the embedding resistant against first-order statistical tests.
+
+https://0xrick.github.io/lists/stego/
+
+https://www.yeahhub.com/the-12-best-must-have-tools-for-steganography-updated-tools/
+
+stegoveritas (python3)
+
+Top 22 Tools For Solving Steganography Challenges (https://www.yeahhub.com/top-steganography-tools-ctf-challenges/)
+S.No	Tool Name	Description
+1	Convert	        Convert images b/w formats and apply filters
+2	Exif	        Shows EXIF information in JPEG files
+3	Exiftool	Read and write meta information in files
+4	Exiv2	        Image metadata manipulation tool
+5	ImageMagick	Tool for manipulating images
+6	Outguess	Universal steganographic tool
+7	Pngtools	For various analysis related to PNGs
+8	SmartDeblur	Used to deblur and fix defocused images
+9	Steganabara	Tool for stegano analysis written in Java
+10	Stegbreak	Launches brute-force dictionary attacks on JPG image
+11	StegCracker	Steganography brute-force utility to uncover hidden data inside files
+12	Stegextract	Detect hidden files and text in images
+13	Steghide	Hide data in various kind of images
+14	Stegsolve	Apply various steganography techniques to images
+15	Zsteg	        PNG/BMP analysis
+16	LSB-Steganography	Python program to steganography files into images using the Least Significant Bit. (https://github.com/RobinDavid/LSB-Steganography)
+17	StegSpy	        Checks classical steganographical schemes
+18	StegSnow	A program for concealing messages in text files by appending tabs and spaces on the end of lines
+19	Binwalk	        Firmware Analysis Tool
+20	Stego-Toolkit	Steganography Toolkit
+21	StegDetect	Performs statistical tests to find if a stego tool was used (jsteg, outguess, jphide, …).
+22	StegoVeritas	Yet another Stego Tool
+
+LSBSteg.py (https://github.com/RobinDavid/LSB-Steganography)
+Python program based on stegonographical methods to hide files in images using the Least Significant Bit technique.
+
+FORENSICS
+-------------------------------------
+Volatility - Memory Forensics (Kali)
+https://www.youtube.com/watch?v=1PAGcPJFwbE
+Ric Messier
+
+CTF Forensics (web) *** Very Useful ***
+https://bitvijays.github.io/LFC-Forensics.html
+
+
+MISC
+----------------------------------
+Power_Dump (Linux)
+Pulling strings from a memory dump 
+https://github.com/chrisjd20/power_dump
+
+olevba (python script) (Kali?)
+Word docm macros can be extracted using olevba.
+https://github.com/decalage2/oletools/wiki/olevba
+https://github.com/decalage2/oletools/wiki/olevba
+
+Quitely Enumerating Windows (Kali - Metasploit/Meterpreter)
+Fix Me05 Operating in the Shadows - Carlos Perez
+https://www.youtube.com/watch?v=NXTr4bomAxk
+https://github.com/darkoperator/Meterpreter-Scripts
+https://github.com/darkoperator/GetAuditPol
+meterpreter > execute -H -c -i -m -d notepad.exe -f GetAuditPol.exe
+
+pdfcrack (Kali)
+apt install
+
+Malbolge (web)
+Malbolge, invented by Ben Olmstead in 1998, is an esoteric programming language
+designed to be as difficult to program in as possible. And so it is :-)
+http://www.malbolge.doleczek.pl/
+
+Reverse a String (web)
+http://string-functions.com/reverse.aspx
+
+WFUZZ (Kali)
+used to bruteforce usernames/passwords
+
+BinayHexConverter
+https://www.binaryhexconverter.com/binay-to-ascii-text-conveter
+
+Base64decode/encode (web)
+https://base64decode.org
+
+Braille Translator (web)
+https://www.branah.com/braille-translator
+
+ascii "1" and "0" to image
+https://www.dcode.fr/binary-image
+
+dnsteal v 2.0 (python)
+This is a fake DNS server that allows you to stealthily extract files from a victim machine
+ through DNS requests.
+https://github.com/m57/dnsteal
+
+ASCII tools (web)
+https://onlineasciitools.com/convert-ascii-to-utf8
+
+Wireshark SSL
+https://wiki.wireshark.org/SSL#Preference_Settings
+
+ELF Parser (http://elfparser.com/download.html)
+The goals of the project are pretty simple: offer a multi-platform static ELF analysis tool
+ with basic hueristics to determine a binaries capabilties. 
+
+Pyrex
+https://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/version/Doc/About.html
+Pyrex is a Python-like language for rapidly and easily writing python extension modules. 
+It can be described as python with C data types. 
+With Pyrex, one can produce Python-like code that runs as fast as in C, with easy access to C libraries and functions.
+
+File Signatures Table (web)
+https://www.garykessler.net/library/file_sigs.html
+
+OTHER
+------------------------
+https://github.com/keydet89
+https://github.com/williballenthin/python-registry/tree/master/samples
+https://ericzimmerman.github.io/#!index.md
+
+CHRISTOPHER TRUNCER'S WEBSITE
+https://github.com/FortyNorthSecurity/Just-Metadata
+https://www.christophertruncer.com/just-metadata-intel-gathering-and-analysis-of-ip-metadata/
+
+http://www.tekdefense.com/automater/
+
+CherryTree Report
+https://www.giuspen.com/cherrytree/
+
+MkDocs (web)
+Project documentation with Markdown.
+https://www.mkdocs.org/
+
+SecLists = Pentesters Companion (for Kali)
+https://github.com/danielmiessler/SecLists
+
+CTF tools (Kali)
+https://bitvijays.github.io/LFC-Forensics.html
+
+PACKER/UNPACKER
+--------------------------------------------
+UPX (Ultimate Packer for Executables)
+https://github.com/upx/upx
+UPX is an advanced executable file compressor. UPX will typically
+reduce the file size of programs and DLLs by around 50%-70%, thus
+reducing disk space, network load times, download times and
+other distribution and storage costs.
+UPX is free you could also use it to unpack binaries. (also see UPXunpacker.exe)
+Manual Page: https://linux.die.net/man/1/upx
+
+PEiD
+https://www.aldeid.com/wiki/PEiD
+PEiD detects most common packers, cryptors and compilers for PE files.
+It can currently detect more than 470 different signatures in PE files.
+It seems that the official website (www.peid.info) has been discontinued. 
+Hence, the tool is no longer available from the official website but it still hosted on other sites.
+Go to http://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/PEiD-updated.shtml
+Download PEiD-0.95-20081103.zip.
